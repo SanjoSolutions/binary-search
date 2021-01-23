@@ -11,24 +11,24 @@
     This calibration is devoted to God.<br>
     In the name of God I have permission to calibrate the consciousness level of what is held in mind.
   </p>
-  <button id="l">L</button>
-  <button id="r">R</button>
+  <button id="one">1</button>
+  <button id="zero">0</button>
   <div id="output" style="margin-top: 0.25rem;"></div>
   <script>
-    const $l = document.getElementById('l')
-    const $r = document.getElementById('r')
+    const $one = document.getElementById('one')
+    const $zero = document.getElementById('zero')
     const $output = document.getElementById('output')
 
     let number = 0n
     let counter = 0n
 
-    $l.addEventListener('click', () => {
+    $one.addEventListener('click', () => {
       number = (1n << counter) | number
       next()
       output()
     })
 
-    $r.addEventListener('click', () => {
+    $zero.addEventListener('click', () => {
       next()
       output()
     })
