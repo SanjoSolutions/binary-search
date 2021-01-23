@@ -15,30 +15,20 @@
   <button id="r">R</button>
   <div id="output" style="margin-top: 0.25rem;"></div>
   <script>
-    const maxNumber = 1000
-    const numberOfBits = calculateNumberOfBits(maxNumber)
-    console.log('numberOfBits', numberOfBits)
-
-    function calculateNumberOfBits(maxNumber) {
-      // 2 ** numberOfBits = maxNumber
-      return Math.ceil(Math.log2(maxNumber))
-    }
-
     const $l = document.getElementById('l')
     const $r = document.getElementById('r')
     const $output = document.getElementById('output')
 
     let number = 0n
-    let counter = 0
+    let counter = 0n
 
     $l.addEventListener('click', () => {
-      number = (number << 1n) | 1n
+      number = (1n << counter) | number
       next()
       output()
     })
 
     $r.addEventListener('click', () => {
-      number = (number << 1n) | 0n
       next()
       output()
     })
@@ -48,18 +38,7 @@
     }
 
     function output() {
-      outputInConsole()
       $output.textContent = number.toString(10)
-      if (counter === numberOfBits) {
-        $l.setAttribute('disabled', String(true))
-        $r.setAttribute('disabled', String(true))
-      }
-    }
-
-    function outputInConsole() {
-      let numberAsString = number.toString(2)
-      numberAsString = numberAsString.padStart(counter, '0')
-      console.log(numberAsString)
     }
   </script>
 </body>
