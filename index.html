@@ -3,40 +3,91 @@
 <head>
   <meta charset="utf-8">
   <title>Consciousness Calibration Helper Tool</title>
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <style>
+    body {
+      margin: 0.5rem;
+    }
+
+    p:first-child {
+      margin-top: 0;
+    }
+
+    .columns {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .column {
+      flex: 1 1 50%;
+    }
+
+    .column-1 {
+      padding-right: 0.5rem;
+    }
+
+    .column-2 {
+      margin-top: 0.5rem;
+    }
+
+    @media (min-width: 817px) {
+      .columns {
+        flex-wrap: nowrap;
+      }
+
+      .column-2 {
+        margin-top: 0;
+      }
+    }
+  </style>
 </head>
 
 <body>
 <h1 style="margin-top: 0;">Consciousness Calibration Helper Tool</h1>
-<p>
-  This work is devoted to God.
-</p>
-<p>
-  <strong>Reference scale:</strong>
-  <a target="_blank"
-     href="https://books.google.de/books?id=1V_6DwAAQBAJ&lpg=PP1&dq=healing%20and%20recovery&pg=PA475#v=onepage&q=healing%20and%20recovery&f=false">
-    The Map of the Scale of Consciousness by David R. Hawkins</a>
-  (see one of the books by David R. Hawkins)
-</p>
-<p>
-  <strong>Also see:</strong>
-  <a target="_blank"
-     href="https://books.google.de/books?id=1V_6DwAAQBAJ&lpg=PP1&dq=healing%20and%20recovery&pg=PA477#v=onepage&q=healing%20and%20recovery&f=false">
-    How to calibrate the levels of Consciousness</a>
-</p>
-<p>
-  <strong>About this tool:</strong>
-  This tool can help to encode a consciousness level as a number in the decimal system<br>
-  which has been calibrated with a consciousness calibration technique<br>
-  by verifying the digits of the number encoded as a binary number<br>
-  from the least significant bit to the most significant bit.<br>
-</p>
-<p style="margin-bottom: 0.25rem;">
-  This calibration is devoted to God.<br>
-  In the name of God I have permission to calibrate the consciousness level of what is held in mind.
-</p>
-<button id="one">1</button>
-<button id="zero">0</button>
-<div id="output" style="margin-top: 0.25rem;"></div>
+<div class="columns">
+  <div class="column column-1">
+    <p>
+      This work is devoted to God.
+    </p>
+    <p>
+      <strong>Reference scale:</strong>
+      <a target="_blank"
+         href="https://books.google.de/books?id=1V_6DwAAQBAJ&lpg=PP1&dq=healing%20and%20recovery&pg=PA475#v=onepage&q=healing%20and%20recovery&f=false">
+        The Map of the Scale of Consciousness by David R. Hawkins</a>
+      (see one of the books by David R. Hawkins)
+    </p>
+    <p>
+      <strong>Also see:</strong>
+      <a target="_blank"
+         href="https://books.google.de/books?id=1V_6DwAAQBAJ&lpg=PP1&dq=healing%20and%20recovery&pg=PA477#v=onepage&q=healing%20and%20recovery&f=false">
+        How to calibrate the levels of Consciousness</a>
+    </p>
+    <p>
+      <strong>About this tool:</strong>
+      This tool can help to encode a consciousness level as a number in the decimal system<br>
+      which has been calibrated with a consciousness calibration technique<br>
+      by verifying the digits of the number encoded as a binary number<br>
+      from the least significant bit to the most significant bit.<br>
+    </p>
+    <p style="margin-bottom: 0.25rem;">
+      This calibration is devoted to God.<br>
+      In the name of God I have permission to calibrate the consciousness level of what is held in mind.
+    </p>
+    <button id="one">1</button>
+    <button id="zero">0</button>
+    <div style="margin-top: 0.25rem;">
+      <strong>Number:</strong>
+      <span id="output"></span>
+    </div>
+  </div>
+  <div class="column column-2">
+    <iframe frameborder="0" scrolling="no" style="border:0px"
+            src="https://books.google.de/books?id=1V_6DwAAQBAJ&lpg=PP1&dq=healing%20and%20recovery&pg=PA475&output=embed"
+            width="500" height="640"></iframe>
+  </div>
+</div>
 
 <script>
   const $one = document.getElementById('one')
